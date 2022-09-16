@@ -12,12 +12,24 @@ export class CounterComponent implements OnInit {
   @Input() name: string
 
 
+  private counter: number = 0;
+
+
 
 
 //Quando um componente necessita acessar um service ou outro componente necessario declarar no construtor
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+    getCounter() {
+      return this.counter;
+    }
+
+
+    increment(){
+      this.counter++;
+    }
+
   }
 
-}
